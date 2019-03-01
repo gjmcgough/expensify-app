@@ -7,29 +7,29 @@ import './styles/styles.scss';
 
 const ExpenseDashboardPage = () => (
   <div>
-    some text, dashboard
+    DASHBOARD
   </div>
 );
 
 const AddExpensePage = () => (
   <div>
-    add expense component
+    EXPENSE
   </div>
 );
 
 const EditExpensePage = () => (
   <div>
-    This is the edit page
+    EDIT
   </div>
 );
 
 const  HelpPage = () => (
   <div>
-    This is the help page
+    HELP
   </div>
 );
 
-const routes =(
+const routes = (
   <BrowserRouter>
     <div>
       <Route path="/" component={ExpenseDashboardPage} exact={true}/>
