@@ -1,7 +1,7 @@
 import React from 'react';
 
 const EditExpensePage = () => (
-  <div>NavLink
+  <div>
     EDIT EXPENSE
   </div>
 );

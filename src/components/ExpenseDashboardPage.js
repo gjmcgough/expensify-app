@@ -2,7 +2,7 @@ import React from 'react';
 
 const ExpenseDashboardPage = () => (
   <div>
-    DASHBOARD
+    DASHBOARD!!!
   </div>
 );
 
