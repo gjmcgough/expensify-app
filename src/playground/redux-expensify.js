@@ -172,19 +172,19 @@ store.dispatch(sortByAmount());
 // store.dispatch(setStartDate());
 // store.dispatch(setEndDate(500));
 // store.dispatch(setEndDate(2000));
-
-const demoState = {
-  expenses: [{
-    id: 'ghbkl',
-    description: 'January rent',
-    notes: 'paid late, dammit....',
-    amount: 100000,
-    createdAt: 0
-  }],
-  filters: {
-    text: 'rent',
-    sortBy: 'amount', //date or amount
-    startDate: undefined,
-    endDate: undefined
-  }
-};
+// 
+// const demoState = {
+//   expenses: [{
+//     id: 'ghbkl',
+//     description: 'January rent',
+//     notes: 'paid late, dammit....',
+//     amount: 100000,
+//     createdAt: 0
+//   }],
+//   filters: {
+//     text: 'rent',
+//     sortBy: 'amount', //date or amount
+//     startDate: undefined,
+//     endDate: undefined
+//   }
+// };
