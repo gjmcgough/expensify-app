@@ -18,15 +18,9 @@ store.subscribe(() => {
   console.log(visibleExpenses);
 });
 
-store.dispatch(addExpense({description: "Water Bill", amount: 100, createdAt: 12343213}));
-
-store.dispatch(addExpense({description: "Gas Bill",amount: 300, createdAt: 93453876543}));
-
-store.dispatch(setTextFilter("water"));
-
-setTimeout(() => {
-  store.dispatch(setTextFilter('gas'));
-}, 3000);
+store.dispatch(addExpense({description: "Rent Bill",amount: 1300, amount: 343543}));
+store.dispatch(addExpense({description: "Gas Bill",amount: 300, amount: 93453876543}));
+store.dispatch(addExpense({description: "Water Bill", amount: 100, createdAt: 123343213}));
 
 
 const jsx = (
