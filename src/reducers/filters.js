@@ -7,6 +7,7 @@ const filtersReducerDefaultState = {
 };
 
 export default (state = filtersReducerDefaultState, action) => {
+  // console.log('filtersReducer: received action', action);
   switch (action.type) {
     case 'SET_TEXT_FILTER':
       return {
@@ -34,6 +35,7 @@ export default (state = filtersReducerDefaultState, action) => {
         endDate: action.endDate
       }
     default:
+    // console.log('filtersReducer: unknown action type', action.type);
     return state;
   }
 };

@@ -2,6 +2,7 @@
 const expensesReducerDefaultState = [];
 
 export default (state = expensesReducerDefaultState, action) => {
+  // console.log('expenseReducer: received action', action);
   switch (action.type){
     case 'ADD_EXPENSE':
       return [
@@ -22,6 +23,7 @@ export default (state = expensesReducerDefaultState, action) => {
         };
       });
     default:
+    // console.log('expenseReducer: unknown action type', action.type);
       return state;
   }
 };
