@@ -9,7 +9,7 @@ const AddExpensePage = (props) => (
     <ExpenseForm
       onSubmit={(expense) => {
         props.dispatch(addExpense(expense));
-        // redirect to the '/' page
+        // redirect to the '/' page as if they clicked the link, no pge refresh
         props.history.push('/');
       }}
     />
