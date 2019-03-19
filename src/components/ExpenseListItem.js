@@ -9,10 +9,7 @@ import { Link } from 'react-router-dom';
       <h2>Expense: {props.description}</h2>
     </Link>
     <p>Amount: ${props.amount} - Created at: {props.createdAt}</p>
-    <button onClick={() => {
-        props.dispatch(removeExpense(props.id));
-      }}
-    >Remove</button>
+  
   </div>
 );
 
