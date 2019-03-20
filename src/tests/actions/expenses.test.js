@@ -39,7 +39,7 @@ test('should set up add expense object with input values', () => {
 });
 
 test('should set up add expense action object with DEFAULT values', () => {
-  const result = addExpense({id: 1});
+  const result = addExpense();
   expect(result).toEqual({
     type: 'ADD_EXPENSE',
     expense: {
