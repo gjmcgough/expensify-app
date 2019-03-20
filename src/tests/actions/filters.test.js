@@ -32,10 +32,11 @@ test('should genereate sortByAmount action object', () => {
 });
 
 test('should generate setTextFilter action object', () => {
-  const action = setTextFilter('bill');
+  const text = 'bill';
+  const action = setTextFilter(text);
   expect(action).toEqual({
     type: 'SET_TEXT_FILTER',
-    text: 'bill'
+    text
   });
 });
 
