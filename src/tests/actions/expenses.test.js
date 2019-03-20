@@ -1,5 +1,4 @@
 import { addExpense, removeExpense, editExpense } from '../../actions/expenses';
-import uuid from 'uuid';
 
 test('should set up remove expense action object', () => {
   const result = removeExpense('123abc');
