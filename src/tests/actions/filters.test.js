@@ -18,17 +18,11 @@ test('should generate setEndDate action object', () => {
 });
 
 test('should genereate sortByDate action object', () => {
-  const action = sortByDate();
-  expect(action).toEqual({
-    type: 'SORT_BY_DATE'
-  });
+  expect(sortByDate()).toEqual({ type: 'SORT_BY_DATE' });
 });
 
 test('should genereate sortByAmount action object', () => {
-  const action = sortByAmount();
-  expect(action).toEqual({
-    type: 'SORT_BY_AMOUNT'
-  });
+  expect(sortByAmount()).toEqual({ type: 'SORT_BY_AMOUNT' });
 });
 
 test('should generate setTextFilter action object', () => {
