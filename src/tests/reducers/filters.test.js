@@ -1,6 +1,7 @@
 import moment from 'moment';
 import filtersReducer from '../../reducers/filters';
 
+//testing variables
 const testDate = moment(0).add(2, 'days');
 const testText = "bill";
 
