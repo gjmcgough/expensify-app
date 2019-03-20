@@ -14,4 +14,4 @@ test('should generate a greeting with the users name', () => {
 test('should return greeting with "Anonymous" as the default value', () => {
   const result = generateGreeting();
   expect(result).toBe("YO Anonymous!");
-})
+});
