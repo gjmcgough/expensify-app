@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 export class AddExpensePage extends React.Component {
   onSubmit = (expense) => {
-    this.props.onSubmit(expense);
+    this.props.addExpense(expense);
     // redirect to the '/' page as if they clicked the link, no pge refresh
     this.props.history.push('/');
   };
@@ -22,7 +22,7 @@ export class AddExpensePage extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  onSubmit: (expense) => dispatch(addExpense(expense))
+  addExpense: (expense) => dispatch(addExpense(expense))
 });
 
 export default connect(undefined, mapDispatchToProps)(AddExpensePage);
