@@ -5,7 +5,7 @@ import { editExpense, removeExpense } from '../actions/expenses';
 
 export class EditExpensePage extends React.Component {
   onSubmit = (expense) => {
-    this.props.editExpense(this.props.expense.id, expense);
+    this.props.editExpense(expense.id, expense);
     this.props.history.push('/');
   }
   onRemove = () => {
@@ -13,7 +13,7 @@ export class EditExpensePage extends React.Component {
     this.props.history.push('/');
   }
   render() {
-    console.log("PROPS: " + this.props.expense);
+    //console.log("PROPS: " + this.props.expense);
     return (
       <div>
         <ExpenseForm
