@@ -1,3 +1,6 @@
-public/bundle.js
 public/LICENSE
 public/README.md
+public/bundle.js
+public/bundle.js.map
+public/styles.css
+public/styles.css.map
