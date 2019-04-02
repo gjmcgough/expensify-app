@@ -12,7 +12,7 @@ exports[`should render ExpenseListItem correctly 1`] = `
     </h2>
   </Link>
   <p>
-    Amount: $
+    Amount: 
     $1.95
     - Created at: 
     December 31st, 1969
