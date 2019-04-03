@@ -4,6 +4,7 @@ export default (expenses) => {
     return 0;
   } else {
     const expensesArray = expenses.map((expense) => expense.amount);
-    return expensesArray.reduce(reducer);
+    const total = expensesArray.reduce(reducer);
+    return total;
   };
 };
