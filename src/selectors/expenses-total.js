@@ -1,10 +1,6 @@
 export default (expenses) => {
   const reducer = (accumulator, currentValue) => accumulator + currentValue;
-  if (expenses.length <= 0) {
-    return 0;
-  } else {
-    const expensesArray = expenses.map((expense) => expense.amount);
-    const total = expensesArray.reduce(reducer);
-    return total;
-  };
+  const expensesArray = expenses.map((expense) => expense.amount);
+  const total = expensesArray.reduce(reducer, 0); //2nd argument is the initial value, so with no expenses this will return 0
+  return total;
 };
