@@ -12,6 +12,24 @@ const config = {
 
 firebase.initializeApp(config);
 
-firebase.database().ref().set({
-  name: "Greg M"
+const database = firebase.database();
+
+database.ref().set({
+  name: "Greg M",
+  age: 31,
+  isSingle: false,
+  location: {
+    country: 'United States',
+    state: 'California',
+    city: 'San Diego'
+  }
+});
+
+database.ref('age').set(30);
+database.ref('location/city').set('Rosarito');
+database.ref('location/state').set('Baja Norte');
+database.ref('location/country').set('Mexico');
+database.ref("attributes").set({
+  height: 170,
+  weight:  67
 });
