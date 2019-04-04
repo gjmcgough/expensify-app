@@ -15,13 +15,13 @@ export class Header extends React.Component {
   render() {
     return (
       <div>
-        <ExpensesSummary
-          expensesCount={this.expensesCount}
-          expensesTotal={this.expensesTotal}
-          expenses={this.props.expenses}
-        />
         <header>
           <h1>Expensify</h1>
+          <ExpensesSummary
+            expensesCount={this.expensesCount}
+            expensesTotal={this.expensesTotal}
+            expenses={this.props.expenses}
+          />
           <NavLink to="/" activeClassName="is-active" exact={true}>Dashboard</NavLink>
           <NavLink to="/create" activeClassName="is-active">Create Expense</NavLink>
         </header>
