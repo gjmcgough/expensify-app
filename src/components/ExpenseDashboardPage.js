@@ -10,6 +10,7 @@ export class ExpenseDashboardPage extends React.Component {
   render() {
     return (
     <div>
+      {console.log("PPPROPS! " + this.props.expenses)}
       <ExpensesSummary
         expensesCount={this.props.expenses.length}
         expensesTotal={selectExpensesTotal(this.props.expenses)}

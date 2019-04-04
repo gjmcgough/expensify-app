@@ -2,6 +2,10 @@
 
 exports[`ExpenseDashboardPage should load correctly 1`] = `
 <div>
+  <ExpensesSummary
+    expensesCount={3}
+    expensesTotal={114195}
+  />
   <Connect(ExpenseListFilters) />
   <Connect(ExpenseList) />
 </div>
