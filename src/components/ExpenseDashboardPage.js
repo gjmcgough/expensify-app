@@ -1,12 +1,26 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import ExpenseList from './ExpenseList';
 import ExpenseListFilters from './ExpenseListFilters';
+import ExpensesSummary from './ExpensesSummary';
+import selectExpensesTotal from '../selectors/expenses-total';
+import selectExpenses from '../selectors/expenses'
 
-const ExpenseDashboardPage = () => (
+const ExpenseDashboardPage = (props) => (
 <div>
-<ExpenseListFilters />
-<ExpenseList />
+  <ExpensesSummary
+    expensesCount={props.expenses.length}
+    expensesTotal={selectExpensesTotal(props.expenses)}
+  />
+  <ExpenseListFilters />
+  <ExpenseList />
 </div>
 );
 
-export default ExpenseDashboardPage;
+const mapStateToProps = (state) => {
+  return {
+    expenses: selectExpenses(state.expenses, state.filters)
+  };
+};
+
+export default connect(mapStateToProps)(ExpenseDashboardPage);

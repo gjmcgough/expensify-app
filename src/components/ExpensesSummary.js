@@ -2,12 +2,13 @@ import React from 'react';
 import numeral from 'numeral';
 
 export default (props) => {
-  const expenseWord = props.expensesCount(props.expenses) > 1 ? 'expenses' : 'expense';
-  const formattedExpensesTotal = numeral(props.expensesTotal(props.expenses) / 100).format('$0,0.00');
-  const totalExpenses = props.expensesCount(props.expenses);
+  console.log("COUNT: " + props.expensesCount);
+  const expenseWord = props.expensesCount > 1 ? 'expenses' : 'expense';
+  const formattedExpensesTotal = numeral(props.expensesTotal / 100).format('$0,0.00');
+  const totalExpenses = props.expensesCount;
   return (
     <div>
-      <h3>Viewing {totalExpenses} {expenseWord} totalling {formattedExpensesTotal}.</h3>
+      <h2>Viewing {totalExpenses} {expenseWord} totalling {formattedExpensesTotal}.</h2>
     </div>
   );
 };
