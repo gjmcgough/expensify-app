@@ -4,7 +4,7 @@ import numeral from 'numeral';
 import selectExpensesTotal from '../selectors/expenses-total';
 import selectExpenses from '../selectors/expenses';
 
-const ExpensesSummary = (props) => {
+export const ExpensesSummary = (props) => {
   const expenseWord = props.expensesCount > 1 ? 'expenses' : 'expense';
   const formattedExpensesTotal = numeral(props.expensesTotal / 100).format('$0,0.00');
   const totalExpenses = props.expensesCount;
