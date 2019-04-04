@@ -9,7 +9,6 @@ import selectExpenses from '../selectors/expenses'
 export const ExpenseDashboardPage = (props) => {
   return (
     <div>
-      {console.log("PPPROPS! " + props.expenses)}
       <ExpensesSummary
         expensesCount={props.expenses.length}
         expensesTotal={selectExpensesTotal(props.expenses)}
