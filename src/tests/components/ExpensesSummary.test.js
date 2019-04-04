@@ -6,13 +6,17 @@ import expenses from '../fixtures/expenses';
 test('should render single expense singularily' , () => {
   const wrapper = shallow(
     <ExpensesSummary
-      expensesCount={expensesCount([expenses[0]])}
-      expensesTotal={expensesTotal([expenses[0]])}
+      expensesCount={1}
+      expensesTotal={300}
     />);
   expect(wrapper).toMatchSnapshot();
 });
 
 test('should render multiple expenses with plural expenses' , () => {
-  // wrapper.find('ExpensesSummary').prop('expenses')(expenses);
-  // expect(wrapper).toMatchSnapshot();
+  const wrapper = shallow(
+    <ExpensesSummary
+      expensesCount={2}
+      expensesTotal={900}
+    />);
+  expect(wrapper).toMatchSnapshot();
 });

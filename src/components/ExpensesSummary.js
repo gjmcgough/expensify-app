@@ -1,7 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import numeral from 'numeral';
 
-export default (props) => {
+const ExpensesSummary = (props) => {
   console.log("COUNT: " + props.expensesCount);
   const expenseWord = props.expensesCount > 1 ? 'expenses' : 'expense';
   const formattedExpensesTotal = numeral(props.expensesTotal / 100).format('$0,0.00');
@@ -13,5 +14,4 @@ export default (props) => {
   );
 };
 
-
-// numeral(props.amount / 100).format('$0,0.00');
+export default ExpensesSummary;

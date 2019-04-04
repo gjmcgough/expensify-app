@@ -6,10 +6,6 @@ exports[`should render header correctly 1`] = `
     <h1>
       Expensify
     </h1>
-    <Component
-      expensesCount={[Function]}
-      expensesTotal={[Function]}
-    />
     <NavLink
       activeClassName="is-active"
       ariaCurrent="true"

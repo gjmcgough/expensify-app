@@ -6,16 +6,20 @@ import ExpensesSummary from './ExpensesSummary';
 import selectExpensesTotal from '../selectors/expenses-total';
 import selectExpenses from '../selectors/expenses'
 
-const ExpenseDashboardPage = (props) => (
-<div>
-  <ExpensesSummary
-    expensesCount={props.expenses.length}
-    expensesTotal={selectExpensesTotal(props.expenses)}
-  />
-  <ExpenseListFilters />
-  <ExpenseList />
-</div>
-);
+export class ExpenseDashboardPage extends React.Component {
+  render() {
+    return (
+    <div>
+      <ExpensesSummary
+        expensesCount={this.props.expenses.length}
+        expensesTotal={selectExpensesTotal(this.props.expenses)}
+      />
+      <ExpenseListFilters />
+      <ExpenseList />
+    </div>
+    );
+  };
+};
 
 const mapStateToProps = (state) => {
   return {
