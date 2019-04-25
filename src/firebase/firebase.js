@@ -29,7 +29,7 @@ database.ref('age').set(30);
 database.ref('location/city').set('Rosarito');
 database.ref('location/state').set('Baja Norte');
 database.ref('location/country').set('Mexico');
-database.ref("attributes").set({
+database.refgi("attributes").set({
   height: 170,
   weight:  67
 });
