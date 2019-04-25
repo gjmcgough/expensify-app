@@ -23,13 +23,21 @@ database.ref().set({
     state: 'California',
     city: 'San Diego'
   }
+}).then(() => {
+  console.log('DATA IS SAVED!');
+}).catch((e) => {
+  console.log('ThIs fAiLeD', e);
 });
 
-database.ref('age').set(30);
-database.ref('location/city').set('Rosarito');
-database.ref('location/state').set('Baja Norte');
-database.ref('location/country').set('Mexico');
-database.refgi("attributes").set({
+// database.ref('age').set(30);
+// database.ref('location/city').set('Rosarito');
+// database.ref('location/state').set('Baja Norte');
+// database.ref('location/country').set('Mexico');
+database.ref("attributes").set({
   height: 170,
   weight:  67
+}).then(() => {
+  console.log('WU TANG CLAN');
+}).catch((e) => {
+  console.log('FAILURE ERROR', e);
 });
