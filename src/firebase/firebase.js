@@ -14,90 +14,63 @@ firebase.initializeApp(config);
 
 const database = firebase.database();
 
-const onValueChange = (snapshot) => {
-  const response = snapshot.val();
-  console.log(response);
-  console.log(`${response.name} is a ${response.job.title} at ${response.job.company}`);
-};
+const expensesList = database.ref('expenses');
 
-database.ref().on('value', onValueChange),
-  (e) => {
-    console.log('Error fetching data', e);
-  };
+expensesList.push({
+  description: 'TRD Offroad',
+  note: 'Badass',
+  amount: 35000,
+  createdAt: '4/16/19'
+});
 
-setTimeout(() => {
-  database.ref().update({
-    name: 'GREGORIO',
-    'job/company': 'ServiceNow',
-    'job/title': 'Associate Developer'
-  });
-}, 5000);
+expensesList.push({
+  description: 'bumper',
+  note: 'front',
+  amount: 1000,
+  createdAt: '4/30/19'
+});
 
-// console.log(database.ref(name) + ' is a ' + database.ref(job) + ' at '+ database.ref(company));
-
-// const onValueChange = (snapshot) => {
-//   console.log(snapshot.val());
-// };
-//
-// database.ref().on('value', onValueChange), (e) => {
-//   console.log('error fetching data', e);
-// };
-//
-// setTimeout(() => {
-//   database.ref('age').set(55);
-// }, 3500);
-//
-// setTimeout(() => {
-//   database.ref().off('value', onValueChange);
-// }, 7000);
-//
-// setTimeout(() => {
-//   database.ref('age').set(100);
-// }, 10500);
+expensesList.push({
+  description: 'rack',
+  note: 'roof',
+  amount: 1000,
+  createdAt: '5/15/19'
+});
 
 
-// database.ref('location/city')
-//   .once('value')
-//   .then((snapshot) => {
-//     const val = snapshot.val();
-//     console.log(val);
-// }).catch((e)=>{
-//   console.log('Error fetching data', e);
-// })
+
+
+
+
+// database.ref('notes/-LdLm1XJ8fCGzNmZwjtb').remove();
+
+// database.ref('notes').push({
+//   title: 'Course topix',
+//   body: 'React, redux, seismic'
+// });
 
 //
-// database.ref().set({
-//   name: "Greg M",
-//   stressLevel: 6,
-//   age: 31,
-//   job: {
-//     title: 'Software Developer',
-//     company: 'Google'
-//   },
-//   location: {
-//     country: 'United States',
-//     state: 'California',
-//     city: 'San Diego'
+// const firebaseNotes = () => {
+//   notes: {
+//     id: {
+//       title: ,
+//       body:
+//     },
+//     id: {
+//       title: ,
+//       body:
+//     }
 //   }
-// }).then(() => {
-//   console.log('DATA IS SAVED!');
-// }).catch((e) => {
-//   console.log('ThIs fAiLeD', e);
-// });
+// }
 //
-// database.ref().update({
-//   stressLevel: 9,
-//   'job/company': 'Amazon',
-//   'location/city': 'Seattle'
-// });
+// const notes = [{
+//     id:12,
+//     title:'first note',
+//     body: 'notey stufffff afhiusdf sfs gousggdfgoghr gerg eg gsg erogelfdihgfkldg jerfdg ierofdhglsdj fwef sdf'
+//   },{
+//     id:34,
+//     title:'second note',
+//     body: 'more notey note stufffff afhiusdf sfs gousggdfgoghr gerg eg gsg erogelfdihgfkldg jerfdg ierofdhglsdj fwef sdf'
+// }];
 //
-// const singleRef = database.ref('isSingle');
-
-
-
-//
-// singleRef.remove().then(() => {
-//   console.log('REMOVE SUCCESS');
-// }).catch((e) => {
-//   console.log('REMOVE FAILED');
-// });
+// database.ref('notes').set(notes);
