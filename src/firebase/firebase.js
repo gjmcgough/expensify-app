@@ -14,6 +14,8 @@ firebase.initializeApp(config);
 
 const database = firebase.database();
 
+export { firebase, database as default };
+
 // const expensesList = database.ref('expenses');
 
 // database.ref('expenses')
@@ -36,9 +38,11 @@ const database = firebase.database();
 //   console.log(snapshot.key, snapshot.val());
 // })
 
-database.ref('expenses').on('child_added', (snapshot) => {
-  console.log(snapshot.key, snapshot.val());
-})
+// database.ref('expenses').on('child_added', (snapshot) => {
+//   console.log(snapshot.key, snapshot.val());
+// })
+
+
 // expensesList.push({
 //   description: 'TRD Offroad',
 //   note: 'Badass',
