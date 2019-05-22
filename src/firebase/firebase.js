@@ -14,29 +14,49 @@ firebase.initializeApp(config);
 
 const database = firebase.database();
 
-const expensesList = database.ref('expenses');
+// const expensesList = database.ref('expenses');
 
-expensesList.push({
-  description: 'TRD Offroad',
-  note: 'Badass',
-  amount: 35000,
-  createdAt: '4/16/19'
-});
+// database.ref('expenses')
+//   .on('value', (snapshot) => {
+//     const expenses = [];
+//     snapshot.forEach((childSnapshot) => {
+//       expenses.push({
+//           id: childSnapshot.key,
+//           ...childSnapshot.val()
+//       });
+//   });
+//     console.log(expenses);
+// });
+//
+// database.ref('expenses').on('child_removed', (snapshot) => {
+//   console.log(snapshot.key, snapshot.val());
+// })
 
-expensesList.push({
-  description: 'bumper',
-  note: 'front',
-  amount: 1000,
-  createdAt: '4/30/19'
-});
+database.ref('expenses').on('child_changed', (snapshot) => {
+  console.log(snapshot.key, snapshot.val());
+})
 
-expensesList.push({
-  description: 'rack',
-  note: 'roof',
-  amount: 1000,
-  createdAt: '5/15/19'
-});
-
+// expensesList.push({
+//   description: 'TRD Offroad',
+//   note: 'Badass',
+//   amount: 35000,
+//   createdAt: '4/16/19'
+// });
+//
+// expensesList.push({
+//   description: 'bumper',
+//   note: 'front',
+//   amount: 1000,
+//   createdAt: '4/30/19'
+// });
+//
+// expensesList.push({
+//   description: 'rack',
+//   note: 'roof',
+//   amount: 1000,
+//   createdAt: '5/15/19'
+// });
+//
 
 
 
