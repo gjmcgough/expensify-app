@@ -41,6 +41,7 @@ test('should add expense to database and store', (done) => {
     amount: 12345,
     createdAt: 10000
   };
+
   store.dispatch(startAddExpense(expenseData)).then(() => {
     expect(2).toBe(2);
     done();
