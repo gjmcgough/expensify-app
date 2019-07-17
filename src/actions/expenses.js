@@ -1,6 +1,16 @@
 import uuid from 'uuid';
 import database from '../firebase/firebase';
 
+// component calls the action generator
+// action generator returns object
+// component dispatches object
+// redux store changes
+
+// WITH FIREBASE:
+// component calls the action generator
+// action generator returns function
+// component dispatches function (?)
+// function runs (has ability to dispatch other actions and do whatever it wants)
 
 // ADD_EXPENSE
 export const addExpense = (expense) => ({
