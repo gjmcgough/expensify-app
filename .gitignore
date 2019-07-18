@@ -3,3 +3,10 @@ public/README.md
 public/dist
 .env.development
 .env.test
+
+
+
+
+git filter-branch --force --index-filter \
+  "git rm --cached --ignore-unmatch .env.development" \
+  --prune-empty --tag-name-filter cat -- --all
