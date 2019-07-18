@@ -1,3 +1,5 @@
 public/LICENSE
 public/README.md
 public/dist
+public/.env.development
+public/.env.test
