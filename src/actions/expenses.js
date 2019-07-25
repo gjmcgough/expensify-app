@@ -57,3 +57,22 @@ export const setExpenses = (expenses) => ({
 });
 
 // export const startSetExpenses;
+export const startSetExpenses = () => {
+// FETCH EXPENSE DATA ONCE
+// PARSE DATA INTO AN ARRAY (FIREBASE.JS FOR EXAMPLE)
+// DISPATCH SET_EXPENSES ACTION
+  return (dispatch) => {
+    return database.ref('expenses').once('value').then((snapshot) => {
+      const expenses = [];
+
+      snapshot.forEach((childSnapshot) => {
+        expenses.push({
+          id: childSnapshot.key,
+          ...childSnapshot.val()
+        });
+      });
+      
+      dispatch(setExpenses(expenses));
+    });
+  };
+};
